@@ -10,7 +10,8 @@
     onOpenEnd: null,
     onCloseStart: null,
     onCloseEnd: null,
-    preventScrolling: true
+      preventScrolling: true,
+      minHideWidth: 992
   };
 
   /**
@@ -358,7 +359,7 @@
     _handleWindowResize() {
       // Only handle horizontal resizes
       if (this.lastWindowWidth !== window.innerWidth) {
-        if (window.innerWidth > 992) {
+        if (window.innerWidth > this.options.minHideWidth) {
           this.open();
         } else {
           this.close();
@@ -388,7 +389,7 @@
     }
 
     _isCurrentlyFixed() {
-      return this.isFixed && window.innerWidth > 992;
+      return this.isFixed && window.innerWidth > this.options.minHideWidth;
     }
 
     _createDragTarget() {

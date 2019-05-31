@@ -10,8 +10,8 @@
     onOpenEnd: null,
     onCloseStart: null,
     onCloseEnd: null,
-      preventScrolling: true,
-      minHideWidth: 992
+    preventScrolling: true,
+    minHideWidth: 992
   };
 
   /**

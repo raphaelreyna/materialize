@@ -658,7 +658,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('jade_compile', ['jade', 'notify:jade_compile']);
-  grunt.registerTask('js_compile', ['concat:temp', 'configureBabel', 'babel:bin', 'clean:temp']);
+  grunt.registerTask('js_compile', ['concat:temp', 'configureBabel', 'babel:bin']);
   grunt.registerTask('sass_compile', [
     'sass:gh',
     'sass:bin',
